@@ -19,6 +19,10 @@
                 width: 960px;
                 color: black;
             }
+            .buttons {
+                margin: auto;
+                width: 960px;
+            }
             .title {
                 margin: auto;
                 width: 960px;
@@ -33,7 +37,7 @@
             }
 
             #table_score {
-                width: 40%;
+                width: 24%;
             }
 
             #rt, #jt, #r_avg, #j_avg {
@@ -56,23 +60,34 @@
             th {
                 font-size: 18px;
             }
+
+            button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+            }
         </style>
         <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="main.js"></script>
     </head>
     <body> 
-        <div class="title">
+        <span class="title">
             <h2>Rodger and Thuy's Game</h2>
             <h2><small>by <a href="https://github.com/rodger-yuan">rodger yuan</a> </small></h2>
-        </div>
+        </span>
         <hr>
         <div class="title">
-            <h3> Score </h3>
+            <h3> Scores </h3>
         </div>
         <div class="table">
             <table id = "table_score">
               <tr>
-                <th width = "50%">Totals</th>
+                <th width = "37%">Totals (Game 1)</th>
                 <th>Win</th>
                 <th>Loss</th>
                 <th>Tie</th>
@@ -82,7 +97,7 @@
             </table>
             <table id = "table_score">
               <tr>
-                <th width = "50%">Averages</th>
+                <th width = "37%">Averages (Game 1)</th>
                 <th>Win</th>
                 <th>Loss</th>
                 <th>Tie</th>
@@ -90,9 +105,41 @@
               <tr id="j_s"></tr>
               <tr id="r_s"></tr>
             </table>
+            <table id = "table_score">
+              <tr>
+                <th width = "37%">Totals (Game 2)</th>
+                <th>Win</th>
+                <th>Loss</th>
+                <th>Tie</th>
+              </tr>
+              <tr id="js2"></tr>
+              <tr id="rs2"></tr>
+            </table>
+            <table id = "table_score">
+              <tr>
+                <th width = "37%">Averages (Game 2)</th>
+                <th>Win</th>
+                <th>Loss</th>
+                <th>Tie</th>
+              </tr>
+              <tr id="j_s2"></tr>
+              <tr id="r_s2"></tr>
+            </table>
+        </div>
+        <div class="buttons">
+            <h3> Game 1: </h3>
+            <button onclick="scrolly('totalsgame1')">Totals</button>
+            <button onclick="scrolly('totalavggame1')">Totals (Averages)</button>
+            <button onclick="scrolly('thuygame1')">Thuy Players</button>
+            <button onclick="scrolly('rodgergame1')">Rodger Players</button>
+            <h3> Game 2: </h3>
+            <button onclick="scrolly('totalsgame2')">Totals</button>
+            <button onclick="scrolly('totalavggame2')">Totals (Averages)</button>
+            <button onclick="scrolly('thuygame2')">Thuy Players</button>
+            <button onclick="scrolly('rodgergame2')">Rodger Players</button>
         </div>
         <div class="title">
-            <h3> Totals </h3>
+            <h3 id="totalsgame1"> Totals (Game 1)</h3>
         </div>
         <div class="table">
             <table>
@@ -118,7 +165,7 @@
             </table>
         </div>
         <div class="title">
-            <h3> Total (Averages) </h3>
+            <h3 id = 'totalavggame1'> Total (Averages) (Game 1)</h3>
         </div>
         <div class="table">
             <table>
@@ -143,9 +190,61 @@
               <tr id="r_avg_total"></tr>
             </table>
         </div>
+        <div class="title">
+            <h3 id="totalsgame2"> Totals (Game 2)</h3>
+        </div>
+        <div class="table">
+            <table>
+              <tr>
+                <th width = "20%">Name</th>
+                <th>GP</th>
+                <th>FG</th>
+                <th>FGA</th>
+                <th>FG%</th>
+                <th>FT</th>
+                <th>FTA</th>
+                <th>FT%</th>                
+                <th>PTS</th>
+                <th>REB</th>
+                <th>AST</th>
+                <th>3P</th>
+                <th>STL</th>
+                <th>BLK</th>
+                <th>TOS</th>
+              </tr>
+              <tr id="jtt2"></tr>
+              <tr id="rtt2"></tr>
+            </table>
+        </div>
+        <div class="title">
+            <h3 id="totalavggame2"> Total (Averages) (Game 2)</h3>
+        </div>
+        <div class="table">
+            <table>
+              <tr>
+                <th width = "20%">Name</th>
+                <th>GP</th>
+                <th>FG</th>
+                <th>FGA</th>
+                <th>FG%</th>
+                <th>FT</th>
+                <th>FTA</th>
+                <th>FT%</th>                
+                <th>PTS</th>
+                <th>REB</th>
+                <th>AST</th>
+                <th>3P</th>
+                <th>STL</th>
+                <th>BLK</th>
+                <th>TOS</th>
+              </tr>
+              <tr id="j_avg_total2"></tr>
+              <tr id="r_avg_total2"></tr>
+            </table>
+        </div>
         <div>
             <div class="title">
-                <h3> Thuy </h3>
+                <h3 id = 'thuygame1'> Thuy (Game 1)</h3>
             </div>
             <div class="table">
                 <table id="thuy_total">
@@ -192,7 +291,7 @@
                 </table>
             </div>
             <div class="title">
-                <h3> Rodger </h3>
+                <h3 id = 'rodgergame1'> Rodger (Game 1)</h3>
             </div>
             <div class="table">
                 <table id = "rodger_total">
@@ -236,6 +335,102 @@
                     <th>TOS</th>
                   </tr>
                   <tr id="r_avg"></tr>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div class="title">
+                <h3 id="thuygame2"> Thuy (Game 2)</h3>
+            </div>
+            <div class="table">
+                <table id="thuy_total2">
+                  <tr>
+                    <th width = "20%">Totals</th>
+                    <th>GP</th>
+                    <th>FG</th>
+                    <th>FGA</th>
+                    <th>FG%</th>
+                    <th>FT</th>
+                    <th>FTA</th>
+                    <th>FT%</th>                
+                    <th>PTS</th>
+                    <th>REB</th>
+                    <th>AST</th>
+                    <th>3P</th>
+                    <th>STL</th>
+                    <th>BLK</th>
+                    <th>TOS</th>
+                  </tr>
+                  <tr id="jt2"></tr>
+                </table>
+            </div>
+            <div class="table">
+                <table id="thuy_avg2">
+                  <tr>
+                    <th width = "20%">Averages</th>
+                    <th>GP</th>
+                    <th>FG</th>
+                    <th>FGA</th>
+                    <th>FG%</th>
+                    <th>FT</th>
+                    <th>FTA</th>
+                    <th>FT%</th>                
+                    <th>PTS</th>
+                    <th>REB</th>
+                    <th>AST</th>
+                    <th>3P</th>
+                    <th>STL</th>
+                    <th>BLK</th>
+                    <th>TOS</th>
+                  </tr>
+                  <tr id="j_avg2"></tr>
+                </table>
+            </div>
+            <div class="title">
+                <h3 id="rodgergame2"> Rodger (Game 2)</h3>
+            </div>
+            <div class="table">
+                <table id = "rodger_total2">
+                  <tr>
+                    <th width = "20%">Totals</th>
+                    <th>GP</th>
+                    <th>FG</th>
+                    <th>FGA</th>
+                    <th>FG%</th>
+                    <th>FT</th>
+                    <th>FTA</th>
+                    <th>FT%</th>                
+                    <th>PTS</th>
+                    <th>REB</th>
+                    <th>AST</th>
+                    <th>3P</th>
+                    <th>STL</th>
+                    <th>BLK</th>
+                    <th>TOS</th>
+                  </tr>
+                  <tr id="rt2"></tr>
+                </table>
+            </div>
+            <div class="table">
+                <table id = "rodger_avg2">
+                  <tr>
+                    <th width = "20%">Averages</th>
+                    <th>GP</th>
+                    <th>FG</th>
+                    <th>FGA</th>
+                    <th>FG%</th>
+                    <th>FT</th>
+                    <th>FTA</th>
+                    <th>FT%</th>                
+                    <th>PTS</th>
+                    <th>REB</th>
+                    <th>AST</th>
+                    <th>3P</th>
+                    <th>STL</th>
+                    <th>BLK</th>
+                    <th>TOS</th>
+                  </tr>
+                  <tr id="r_avg2"></tr>
                 </table>
             </div>
         </div>
