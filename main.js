@@ -3,7 +3,7 @@ $( document ).ready(function() {
 	var rodger_players = ["James Harden", "DeMarcus Cousins", "Russell Westbrook", "Kristaps Porzingis", "Stephen Curry"]
 	var thuy_players = ["LeBron James", "Anthony Davis", "Damian Lillard", "Kevin Durant", "Giannis Antetokounmpo"]
 	var rodger_players_2 = ["Paul George", "Ben Simmons", "Lonzo Ball", "Draymond Green", "Marc Gasol"]
-	var thuy_players_2 = ["John Wall", "Kyrie Irving", "Karl-Anthony Towns", "Jimmy Butler", "DeMar DeRozan"]
+	var thuy_players_2 = ["John Wall", "Kyrie Irving", "Kyle Lowry", "Jimmy Butler", "DeMar DeRozan"]
 
 	$.getJSON(url,  // url
 	    function (data) {  // success callback
