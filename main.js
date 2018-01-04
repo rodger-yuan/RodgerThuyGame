@@ -2,7 +2,7 @@ $( document ).ready(function() {
 	var url = "https://stats.nba.com/stats/leaguedashplayerstats?College=&Conference=&Country=&DateFrom=&DateTo=&Division=&DraftPick=&DraftYear=&GameScope=&GameSegment=&Height=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N&PerMode=Totals&Period=0&PlayerExperience=&PlayerPosition=&PlusMinus=N&Rank=N&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&StarterBench=&TeamID=0&VsConference=&VsDivision=&Weight=&callback=?"
 	var rodger_players = ["James Harden", "DeMarcus Cousins", "Russell Westbrook", "Kristaps Porzingis", "Stephen Curry"]
 	var thuy_players = ["LeBron James", "Anthony Davis", "Damian Lillard", "Kevin Durant", "Giannis Antetokounmpo"]
-	var rodger_players_2 = ["Karl-Anthony Towns", "Kyle Lowry", "John Wall", "Paul George", "DeMar DeRozan"]
+	var rodger_players_2 = ["Karl-Anthony Towns", "Lonzo Ball", "John Wall", "Paul George", "DeMar DeRozan"]
 	var thuy_players_2 = ["Jimmy Butler", "Joel Embiid", "Kyrie Irving", "Ben Simmons", "Victor Oladipo"]
 
 //["Paul George", "Ben Simmons", "Draymond Green", "Karl-Anthony Towns", "Kevin Love", "Devin Booker", "John Wall", "Kyrie Irving", "Kyle Lowry", "Jimmy Butler", "DeMar DeRozan", "Joel Embiid", "Victor Oladipo"]
